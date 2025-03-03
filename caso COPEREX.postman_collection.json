@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "74cb2339-fff2-437f-9396-2449594dddc9",
+		"name": "caso COPEREX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37951903"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "Frezzy",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "HolaProfeNoj.#",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3626/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3626",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveCompany",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M1NDY5NDU2YmM5ODQzNWU2ZTA2ZjMiLCJuYW1lIjoiSGV0dHNvbiIsInVzZXJuYW1lIjoiRnJlenp5Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzQwOTgyMDU5LCJleHAiOjE3NDEwMTA4NTl9.XewA0E-_wuTvn0c4C1RA0XJjXt7AErbQl51CHlwAhG8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Prueba",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Esta es una empresa de prueba para verificar la API",
+							"type": "text"
+						},
+						{
+							"key": "trajectoryYears",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "impactLevel",
+							"value": "Alto",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Sport",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3626/api/company/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3626",
+					"path": [
+						"api",
+						"company",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCompany",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M1NDY5NDU2YmM5ODQzNWU2ZTA2ZjMiLCJuYW1lIjoiSGV0dHNvbiIsInVzZXJuYW1lIjoiRnJlenp5Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzQwOTgyMDU5LCJleHAiOjE3NDEwMTA4NTl9.XewA0E-_wuTvn0c4C1RA0XJjXt7AErbQl51CHlwAhG8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3626/api/company/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3626",
+					"path": [
+						"api",
+						"company",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilterCompany",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M1NDY5NDU2YmM5ODQzNWU2ZTA2ZjMiLCJuYW1lIjoiSGV0dHNvbiIsInVzZXJuYW1lIjoiRnJlenp5Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzQwOTgyMDU5LCJleHAiOjE3NDEwMTA4NTl9.XewA0E-_wuTvn0c4C1RA0XJjXt7AErbQl51CHlwAhG8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "category",
+							"value": "Sport",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3626/api/company/filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3626",
+					"path": [
+						"api",
+						"company",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCompany",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M1NDY5NDU2YmM5ODQzNWU2ZTA2ZjMiLCJuYW1lIjoiSGV0dHNvbiIsInVzZXJuYW1lIjoiRnJlenp5Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzQwOTgyMDU5LCJleHAiOjE3NDEwMTA4NTl9.XewA0E-_wuTvn0c4C1RA0XJjXt7AErbQl51CHlwAhG8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "category",
+							"value": "Articulos de deporte",
+							"type": "text"
+						},
+						{
+							"key": "trajectoryYears",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3626/api/company/update/67c5473356bc98435e6e06f9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3626",
+					"path": [
+						"api",
+						"company",
+						"update",
+						"67c5473356bc98435e6e06f9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generateReport",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M1NDY5NDU2YmM5ODQzNWU2ZTA2ZjMiLCJuYW1lIjoiSGV0dHNvbiIsInVzZXJuYW1lIjoiRnJlenp5Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzQwOTgyMDU5LCJleHAiOjE3NDEwMTA4NTl9.XewA0E-_wuTvn0c4C1RA0XJjXt7AErbQl51CHlwAhG8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3626/api/report/generateReport",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3626",
+					"path": [
+						"api",
+						"report",
+						"generateReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "downloadReport",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
